@@ -947,6 +947,10 @@ img {
     gap: 54px;
     padding: 88px 28px;
   }
+  .about-image-wrap img {
+    aspect-ratio: 3/2;
+    max-height: 380px;
+  }
   .seo-section,
   .faq-section,
   .services-section,

@@ -947,9 +947,12 @@ img {
     gap: 54px;
     padding: 88px 28px;
   }
+  .about-image-wrap {
+    max-width: 260px;
+    margin: 0 auto;
+  }
   .about-image-wrap img {
-    aspect-ratio: 3/2;
-    max-height: 380px;
+    aspect-ratio: 1/1;
   }
   .seo-section,
   .faq-section,

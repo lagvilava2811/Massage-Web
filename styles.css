@@ -995,6 +995,72 @@ img {
     margin-top: 10px;
   }
 }
+/* ── Tablet tweaks (641–768px) ── */
+@media (max-width: 768px) {
+  .trust-section {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .visual-band img {
+    height: 320px;
+  }
+  .visual-copy {
+    padding: 38px 28px;
+  }
+  .visual-copy h2 {
+    font-size: clamp(26px, 4vw, 42px);
+  }
+  .seo-grid {
+    grid-template-columns: 1fr;
+  }
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  .faq-item {
+    min-height: auto;
+    padding: 28px 24px;
+  }
+  .service-card {
+    min-height: auto;
+    padding: 36px 28px;
+  }
+  .service-num {
+    font-size: 54px;
+    margin-bottom: 18px;
+  }
+  .service-card h3 {
+    font-size: 24px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-item {
+    min-height: auto;
+    padding: 28px 24px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  }
+  .contact-item span {
+    margin-bottom: 14px;
+  }
+  .hero-stat-bar {
+    grid-template-columns: 1fr;
+    position: static;
+  }
+  .hero-stat {
+    padding: 18px 28px;
+    border-right: 0;
+    border-top: 1px solid rgba(184, 151, 90, 0.22);
+  }
+  .hero-stat strong {
+    font-size: 28px;
+  }
+}
+
+/* ── Small phones (≤640px) ── */
 @media (max-width: 640px) {
   .cursor {
     display: none;
@@ -1006,49 +1072,507 @@ img {
     display: none;
   }
   .hero-title {
-    font-size: 48px;
+    font-size: clamp(34px, 9vw, 48px);
   }
-  .hero-stat-bar {
-    grid-template-columns: 1fr;
-    position: static;
+  .hero-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
   }
-  .hero-stat {
-    padding: 18px 28px;
-    border-right: 0;
-    border-top: 1px solid rgba(184, 151, 90, 0.22);
+  .hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    margin-bottom: 16px;
+  }
+  .hero-eyebrow::before {
+    width: 22px;
   }
   .hero-left {
-    padding-bottom: 70px;
+    padding: 110px 20px 60px;
   }
-  .hero-actions,
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
   .btn {
     width: 100%;
+    min-height: 48px;
+    font-size: 13px;
+  }
+  .about-section {
+    padding: 64px 20px;
+    gap: 40px;
   }
   .about-image-wrap::before {
     display: none;
   }
   .about-tag {
     right: 0;
+    bottom: -14px;
+    padding: 14px 18px;
+    font-size: 10px;
+  }
+  .about-copy h2 {
+    font-size: clamp(26px, 6vw, 36px);
+    margin-bottom: 18px;
+  }
+  .about-copy p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .about-badges {
+    gap: 8px;
+    margin-top: 22px;
+  }
+  .badge {
+    padding: 7px 12px;
+    font-size: 10px;
+  }
+  .trust-section {
+    padding: 64px 20px;
+  }
+  .trust-copy h2 {
+    font-size: clamp(26px, 6vw, 38px);
+  }
+  .trust-copy p {
+    font-size: 14px;
+  }
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+  .trust-grid article {
+    min-height: auto;
+    padding: 22px 20px;
+  }
+  .trust-grid strong {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .trust-grid span {
+    font-size: 14px;
+  }
+  .services-section {
+    padding: 64px 20px;
+  }
+  .services-head {
+    margin-bottom: 36px;
+  }
+  .services-head h2 {
+    font-size: clamp(28px, 7vw, 42px);
   }
   .services-grid {
     display: block;
     background: transparent;
   }
   .service-card {
+    min-height: auto;
+    padding: 32px 22px;
     margin-bottom: 1px;
+  }
+  .service-num {
+    font-size: 48px;
+    margin-bottom: 14px;
+  }
+  .service-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+  .service-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .service-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .visual-band {
+    grid-template-columns: 1fr;
+  }
+  .visual-band img {
+    height: 260px;
+  }
+  .visual-copy {
+    padding: 32px 20px;
+  }
+  .visual-copy h2 {
+    font-size: clamp(22px, 5.5vw, 34px);
+  }
+  .seo-section {
+    padding: 64px 20px;
+  }
+  .seo-section h2 {
+    font-size: clamp(26px, 6vw, 40px);
+  }
+  .seo-grid p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+  .process-section {
+    padding: 64px 20px;
+    gap: 36px;
+  }
+  .process-sticky h2 {
+    font-size: clamp(28px, 6vw, 42px);
+  }
+  .process-sticky p {
+    font-size: 14px;
   }
   .process-item {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
+    padding: 28px 0;
+  }
+  .process-item h3 {
+    font-size: 24px;
+  }
+  .process-item p {
+    font-size: 14px;
+  }
+  .faq-section {
+    padding: 64px 20px;
+  }
+  .faq-section h2 {
+    font-size: clamp(24px, 6vw, 38px);
+  }
+  .faq-item {
+    min-height: auto;
+    padding: 24px 20px;
+  }
+  .faq-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .faq-item p {
+    font-size: 14px;
+  }
+  .cta-band {
+    padding: 48px 20px;
+  }
+  .cta-band h2 {
+    font-size: clamp(26px, 6vw, 42px);
+  }
+  .cta-band .btn {
+    width: 100%;
+    margin-top: 22px;
+  }
+  .contact-section {
+    padding: 64px 20px;
+  }
+  .contact-head {
+    margin-bottom: 40px;
   }
   .contact-head h2 {
-    font-size: 50px;
+    font-size: clamp(32px, 8vw, 50px);
+  }
+  .contact-item {
+    min-height: auto;
+    padding: 24px 20px;
+  }
+  .contact-item span {
+    margin-bottom: 12px;
+  }
+  .contact-item strong {
+    font-size: 18px;
+  }
+  .site-footer {
+    padding: 24px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-brand {
+    font-size: 17px;
+  }
+  .site-footer p {
+    font-size: 11px;
+    width: 100%;
   }
   .whatsapp-fab {
     min-width: 110px;
     height: auto;
-    right: 18px;
-    bottom: 68px;
+    right: 14px;
+    bottom: 18px;
     padding: 0 16px;
+    min-height: 50px;
+    font-size: 13px;
+  }
+  .mobile-nav a {
+    font-size: 32px;
+  }
+  .mobile-nav {
+    gap: 26px;
+  }
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    margin-bottom: 16px;
+  }
+  .section-label::before {
+    width: 22px;
+  }
+}
+
+/* ── Extra-small phones (≤380px — Galaxy A, iPhone SE, etc.) ── */
+@media (max-width: 380px) {
+  .site-header {
+    padding: 14px 14px;
+    gap: 10px;
+  }
+  .site-header.scrolled {
+    padding: 12px 14px;
+  }
+  .brand-logo {
+    width: 48px;
+    height: 34px;
+  }
+  .brand-text strong {
+    font-size: 13px;
+  }
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+  .hero-left {
+    padding: 100px 14px 50px;
+  }
+  .hero-title {
+    font-size: clamp(28px, 8.5vw, 38px);
+    margin-bottom: 18px;
+  }
+  .hero-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 22px;
+  }
+  .hero-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .hero-eyebrow::before {
+    width: 18px;
+  }
+  .btn {
+    min-height: 46px;
+    padding: 0 16px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+  .hero-stat {
+    padding: 14px 14px;
+  }
+  .hero-stat strong {
+    font-size: 24px;
+  }
+  .hero-stat span {
+    font-size: 10px;
+  }
+  .about-section {
+    padding: 50px 14px;
+    gap: 32px;
+  }
+  .about-copy h2 {
+    font-size: clamp(22px, 6vw, 30px);
+    margin-bottom: 14px;
+  }
+  .about-copy p {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+  .about-tag {
+    padding: 10px 14px;
+    font-size: 9px;
+  }
+  .badge {
+    padding: 6px 10px;
+    font-size: 9px;
+  }
+  .trust-section {
+    padding: 50px 14px;
+  }
+  .trust-copy h2 {
+    font-size: clamp(22px, 6vw, 32px);
+  }
+  .trust-copy p {
+    font-size: 13px;
+  }
+  .trust-grid article {
+    padding: 18px 14px;
+  }
+  .trust-grid strong {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .trust-grid span {
+    font-size: 13px;
+  }
+  .services-section {
+    padding: 50px 14px;
+  }
+  .services-head {
+    margin-bottom: 28px;
+  }
+  .services-head h2 {
+    font-size: clamp(24px, 7vw, 34px);
+  }
+  .service-card {
+    padding: 26px 16px;
+  }
+  .service-num {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .service-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+  .service-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .service-card p {
+    font-size: 13px;
+  }
+  .service-link {
+    font-size: 11px;
+    margin-top: 18px;
+  }
+  .visual-band img {
+    height: 200px;
+  }
+  .visual-copy {
+    padding: 26px 14px;
+  }
+  .visual-copy h2 {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+  .seo-section {
+    padding: 50px 14px;
+  }
+  .seo-section h2 {
+    font-size: clamp(22px, 6vw, 34px);
+  }
+  .seo-grid p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .process-section {
+    padding: 50px 14px;
+    gap: 28px;
+  }
+  .process-sticky h2 {
+    font-size: clamp(24px, 6vw, 34px);
+    margin-bottom: 14px;
+  }
+  .process-sticky p {
+    font-size: 13px;
+  }
+  .process-item {
+    padding: 22px 0;
+    gap: 8px;
+  }
+  .process-item span {
+    font-size: 18px;
+  }
+  .process-item h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  .process-item p {
+    font-size: 13px;
+  }
+  .faq-section {
+    padding: 50px 14px;
+  }
+  .faq-section h2 {
+    font-size: clamp(20px, 5.5vw, 32px);
+  }
+  .faq-item {
+    padding: 20px 14px;
+  }
+  .faq-item h3 {
+    font-size: 19px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .faq-item p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .cta-band {
+    padding: 40px 14px;
+  }
+  .cta-band h2 {
+    font-size: clamp(22px, 6vw, 34px);
+  }
+  .contact-section {
+    padding: 50px 14px;
+  }
+  .contact-head {
+    margin-bottom: 32px;
+  }
+  .contact-head h2 {
+    font-size: clamp(28px, 8vw, 42px);
+  }
+  .contact-item {
+    padding: 20px 14px;
+  }
+  .contact-item span {
+    margin-bottom: 10px;
+    font-size: 10px;
+  }
+  .contact-item strong {
+    font-size: 16px;
+  }
+  .site-footer {
+    padding: 20px 14px;
+  }
+  .footer-brand {
+    font-size: 15px;
+  }
+  .footer-socials {
+    gap: 14px;
+  }
+  .footer-socials a {
+    font-size: 10px;
+  }
+  .site-footer p {
+    font-size: 10px;
+  }
+  .whatsapp-fab {
+    right: 10px;
+    bottom: 14px;
+    min-width: 100px;
+    min-height: 46px;
+    padding: 0 14px;
+    font-size: 12px;
+  }
+  .mobile-nav a {
+    font-size: 26px;
+  }
+  .mobile-nav {
+    gap: 22px;
+  }
+  .mobile-nav-close {
+    font-size: 30px;
+    top: 16px;
+    right: 18px;
+  }
+  .mobile-langs a {
+    font-size: 12px;
+  }
+  .section-label {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    margin-bottom: 12px;
+    gap: 8px;
+  }
+  .section-label::before {
+    width: 18px;
   }
 }

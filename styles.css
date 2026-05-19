@@ -1081,7 +1081,7 @@ img {
   }
   .hero-title {
     font-size: clamp(34px, 9vw, 48px);
-    line-height: 1.25;
+    line-height: 1.38;
   }
   .hero-desc {
     font-size: 15px;

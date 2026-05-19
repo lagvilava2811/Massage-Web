@@ -416,7 +416,8 @@ img {
 }
 .about-image-wrap img {
   width: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 4/3;
+  max-height: 400px;
   object-fit: cover;
 }
 .about-image-wrap::before {
@@ -948,7 +949,7 @@ img {
     padding: 88px 28px;
   }
   .about-image-wrap {
-    max-width: 260px;
+    max-width: 180px;
     margin: 0 auto;
   }
   .about-image-wrap img {

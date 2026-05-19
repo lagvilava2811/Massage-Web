@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /.vscode/
+Disallow: /.git/
+Disallow: /.env
+
+Sitemap: https://ninoabazadze.ge/sitemap.xml

@@ -941,12 +941,12 @@ img {
     padding: 130px 28px 120px;
   }
   .about-section,
-  .process-section {
+  .process-section,
+  .trust-section {
     grid-template-columns: 1fr;
     gap: 54px;
     padding: 88px 28px;
   }
-  .trust-section,
   .seo-section,
   .faq-section,
   .services-section,

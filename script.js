@@ -62,3 +62,7 @@ if (cursor && matchMedia("(pointer:fine)").matches) {
     element.addEventListener("mouseleave", () => cursor.classList.remove("expand"));
   });
 }
+
+if (typeof lucide !== "undefined") {
+  lucide.createIcons();
+}

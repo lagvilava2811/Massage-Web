@@ -279,6 +279,8 @@ img {
 .mobile-langs {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .mobile-langs a {
   font-family: var(--body);
@@ -1628,6 +1630,7 @@ img {
   }
   .mobile-langs a {
     font-size: 12px;
+    padding: 0 12px;
   }
   .section-label {
     font-size: 9px;

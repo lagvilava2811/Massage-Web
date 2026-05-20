@@ -9,7 +9,7 @@
     <meta name="theme-color" content="#0e0d0b" />
     <meta
       name="description"
-      content="Massage in Kutaisi, rehabilitation in Kutaisi and pediatric massage - Nino Abazadze, massage therapist and rehabilitation specialist. Therapeutic massage by appointment."
+      content="Massage and rehabilitation in Kutaisi by Nino Abazadze. Professional therapeutic massage, pediatric massage, and customized recovery plans by appointment."
     />
     <meta
       name="keywords"
@@ -63,7 +63,7 @@
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+            "@type": ["LocalBusiness", "HealthAndBeautyBusiness", "MedicalBusiness"],
             "@id": "https://ninoabazadze.ge/#business",
             "name": "Nino Abazadze - Massage and Rehabilitation in Kutaisi",
             "alternateName": [
@@ -136,12 +136,20 @@
                 }
               }
             ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://ninoabazadze.ge/#person",
+            "name": "Nino Abazadze",
+            "jobTitle": "Massage Therapist & Rehabilitation Specialist",
+            "worksFor": { "@id": "https://ninoabazadze.ge/#business" }
           }
         ]
       }
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#top">Skip to content</a>
     <div class="cursor" id="cursor" aria-hidden="true"></div>
     <header class="site-header" id="header">
       <a class="brand" href="#top"
@@ -161,7 +169,7 @@
         ><a href="#contact">Contact</a>
       </nav>
       <div class="header-tools">
-        <div class="lang-switch">
+        <div class="lang-switch" aria-label="Language switcher">
           <a href="index.html">KA</a><a class="active" href="en.html">EN</a
           ><a href="ru.html">RU</a>
         </div>

@@ -25,6 +25,9 @@ window.addEventListener("scroll", setHeader, { passive: true });
 menuBtn?.addEventListener("click", openNav);
 mobileClose?.addEventListener("click", closeNav);
 mobileNav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeNav));
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeNav();
+});
 
 const revealItems = document.querySelectorAll(".reveal");
 if ("IntersectionObserver" in window) {

@@ -63,7 +63,7 @@
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+            "@type": ["LocalBusiness", "HealthAndBeautyBusiness", "MedicalBusiness"],
             "@id": "https://ninoabazadze.ge/#business",
             "name": "Нино Абазадзе - массаж и реабилитация в Кутаиси",
             "alternateName": [
@@ -136,12 +136,20 @@
                 }
               }
             ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://ninoabazadze.ge/#person",
+            "name": "Нино Абазадзе",
+            "jobTitle": "Массажист-реабилитолог",
+            "worksFor": { "@id": "https://ninoabazadze.ge/#business" }
           }
         ]
       }
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#top">Перейти к содержанию</a>
     <div class="cursor" id="cursor" aria-hidden="true"></div>
     <header class="site-header" id="header">
       <a class="brand" href="#top"
@@ -161,7 +169,7 @@
         ><a href="#contact">Контакты</a>
       </nav>
       <div class="header-tools">
-        <div class="lang-switch">
+        <div class="lang-switch" aria-label="Language switcher">
           <a href="index.html">KA</a><a href="en.html">EN</a
           ><a class="active" href="ru.html">RU</a>
         </div>

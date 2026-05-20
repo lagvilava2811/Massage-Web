@@ -9,9 +9,9 @@
   --ink: #0e0d0b;
   --paper: #f5f0e8;
   --cream: #ede8dc;
-  --gold: #b8975a;
+  --gold: #8a6e35;
   --gold-lt: #d6bd82;
-  --sage: #738a72;
+  --sage: #546d53;
   --white: #faf8f4;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --display: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -42,6 +42,32 @@ body::before {
 a {
   color: inherit;
   text-decoration: none;
+}
+a:focus-visible,
+button:focus-visible,
+.lang-switch a:focus-visible,
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  background: var(--gold);
+  color: var(--paper);
+  padding: 10px 20px;
+  z-index: 1001;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: top 0.2s var(--ease);
+}
+.skip-link:focus-visible {
+  top: 20px;
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
 img {
   display: block;
@@ -165,10 +191,14 @@ img {
   border: 1px solid rgba(184, 151, 90, 0.3);
 }
 .lang-switch a {
-  padding: 8px 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
   font-size: 11px;
   letter-spacing: 0.1em;
-  color: rgba(14, 13, 11, 0.62);
+  color: rgba(14, 13, 11, 0.72);
 }
 .lang-switch a.active {
   background: var(--gold);
@@ -250,16 +280,24 @@ img {
 }
 .mobile-langs {
   display: flex;
-  gap: 12px;
+  gap: 16px;
 }
 .mobile-langs a {
   font-family: var(--body);
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
   color: var(--sage);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid rgba(184, 151, 90, 0.2);
 }
 .mobile-langs .active {
   color: var(--gold);
+  border-color: var(--gold);
+  background: rgba(184, 151, 90, 0.08);
 }
 .hero {
   position: relative;
@@ -309,7 +347,7 @@ img {
 .hero-desc {
   max-width: 42ch;
   margin-bottom: 40px;
-  color: rgba(14, 13, 11, 0.66);
+  color: rgba(14, 13, 11, 0.78);
   font-size: 17px;
   font-weight: 300;
   line-height: 1.8;
@@ -514,7 +552,7 @@ img {
   margin-bottom: 22px;
 }
 .trust-copy p {
-  color: rgba(14,13,11,.64);
+  color: rgba(14,13,11,.78);
   line-height: 1.9;
 }
 .trust-grid {
@@ -545,7 +583,7 @@ img {
   margin-bottom: 28px;
 }
 .trust-grid span {
-  color: rgba(14,13,11,.64);
+  color: rgba(14,13,11,.78);
   line-height: 1.55;
 }
 .services-head {
@@ -561,7 +599,7 @@ img {
 .services-head p {
   max-width: 33ch;
   text-align: right;
-  color: rgba(14, 13, 11, 0.55);
+  color: rgba(14, 13, 11, 0.72);
   line-height: 1.75;
 }
 .services-grid {
@@ -626,7 +664,7 @@ img {
   margin-bottom: 14px;
 }
 .service-card p {
-  color: rgba(14, 13, 11, 0.62);
+  color: rgba(14, 13, 11, 0.76);
   line-height: 1.78;
 }
 .service-link {
@@ -701,7 +739,7 @@ img {
   margin-bottom: 20px;
 }
 .process-sticky p {
-  color: rgba(14, 13, 11, 0.58);
+  color: rgba(14, 13, 11, 0.74);
   line-height: 1.8;
 }
 .process-list {
@@ -734,7 +772,7 @@ img {
   margin-bottom: 8px;
 }
 .process-item p {
-  color: rgba(14, 13, 11, 0.62);
+  color: rgba(14, 13, 11, 0.76);
   line-height: 1.78;
 }
 .faq-section {
@@ -766,7 +804,7 @@ img {
   margin-bottom: 16px;
 }
 .faq-item p {
-  color: rgba(14, 13, 11, 0.62);
+  color: rgba(14, 13, 11, 0.76);
   line-height: 1.78;
 }
 .cta-band {
@@ -870,7 +908,7 @@ img {
   opacity: 0.7;
 }
 .site-footer p {
-  color: rgba(245, 240, 232, 0.38);
+  color: rgba(245, 240, 232, 0.75);
   font-size: 12px;
   letter-spacing: 0.05em;
 }

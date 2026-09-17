@@ -733,10 +733,8 @@ img {
 .process-room-photo {
   display: block;
   width: 100%;
+  height: auto;
   margin-top: 34px;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: center;
   border: 1px solid rgba(184, 151, 90, 0.24);
 }
 .process-list {

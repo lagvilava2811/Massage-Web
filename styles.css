@@ -454,10 +454,10 @@ img {
 }
 .about-image-wrap img {
   width: 100%;
-  aspect-ratio: 4/3;
-  max-height: 400px;
+  aspect-ratio: 4/5;
+  max-height: 610px;
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center top;
 }
 .about-image-wrap::before {
   content: "";
@@ -729,6 +729,15 @@ img {
 .process-sticky p {
   color: rgba(14, 13, 11, 0.74);
   line-height: 1.8;
+}
+.process-room-photo {
+  display: block;
+  width: 100%;
+  margin-top: 34px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(184, 151, 90, 0.24);
 }
 .process-list {
   display: flex;

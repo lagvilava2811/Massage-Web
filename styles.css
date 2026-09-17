@@ -84,12 +84,11 @@ img {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: width 0.3s var(--ease), height 0.3s var(--ease), opacity 0.3s;
+  transition: transform 0.3s var(--ease), opacity 0.3s;
   mix-blend-mode: multiply;
 }
 .cursor.expand {
-  width: 48px;
-  height: 48px;
+  transform: translate(-50%, -50%) scale(4.8);
   opacity: 0.36;
 }
 .site-header {
@@ -104,7 +103,7 @@ img {
   gap: 24px;
   padding: 24px 48px;
   border-bottom: 1px solid transparent;
-  transition: background 0.35s, padding 0.35s, border-color 0.35s;
+  transition: background 0.35s, border-color 0.35s;
 }
 .site-header.scrolled {
   background: rgba(245, 240, 232, 0.9);
@@ -384,6 +383,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 32%;
   transform: scale(1.05);
   animation: imageSettle 7s var(--ease) forwards;
 }
@@ -616,22 +616,9 @@ img {
   overflow: hidden;
   transition: background 0.35s, transform 0.35s;
 }
-.service-card::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 3px;
-  background: var(--gold);
-  transition: width 0.45s var(--ease);
-}
 .service-card:hover {
   background: var(--cream);
   transform: translateY(-8px);
-}
-.service-card:hover::after {
-  width: 100%;
 }
 .service-num {
   display: block;
@@ -752,13 +739,13 @@ img {
   gap: 28px;
   padding: 42px 0;
   border-top: 1px solid rgba(184, 151, 90, 0.24);
-  transition: padding-left 0.3s var(--ease);
+  transition: transform 0.3s var(--ease);
 }
 .process-item:last-child {
   border-bottom: 1px solid rgba(184, 151, 90, 0.24);
 }
 .process-item:hover {
-  padding-left: 18px;
+  transform: translateX(18px);
 }
 .process-item span {
   font-family: var(--display);

@@ -457,6 +457,7 @@ img {
   aspect-ratio: 4/3;
   max-height: 400px;
   object-fit: cover;
+  object-position: center 12%;
 }
 .about-image-wrap::before {
   content: "";

@@ -73,8 +73,8 @@ for filename, language in [('index.html', 'ka'), ('en.html', 'en'), ('ru.html', 
         assert item['name'] in visible_text and item['acceptedAnswer']['text'] in visible_text, f'{filename}: FAQ mismatch'
     business = next(n for n in graph if n.get('@id') == BASE + '#business')
     offers = business['hasOfferCatalog']['itemListElement']
-    assert [(o['price'], o['priceCurrency']) for o in offers] == [(40, 'GEL'), (60, 'GEL')]
-    assert len(re.findall(r'class="price-card"', source)) == 2
+    assert [(o['price'], o['priceCurrency']) for o in offers] == [(40, 'GEL'), (60, 'GEL'), (35, 'GEL'), (50, 'GEL')]
+    assert len(re.findall(r'class="price-card', source)) == 4
     assert len(re.findall(r'class="faq-item"', source)) == 6
     print(f'PASS {filename}: links, assets, headings, languages, prices, schema and FAQ')
 

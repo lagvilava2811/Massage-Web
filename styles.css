@@ -1700,6 +1700,22 @@ main[id] {
 .credential-note .section-label {
   margin-bottom: 10px;
 }
+.certificate-proof {
+  margin-top: 20px;
+  padding: 10px;
+  background: var(--white);
+  border: 1px solid rgba(138, 110, 53, 0.35);
+}
+.certificate-proof img {
+  width: 100%;
+  height: auto;
+}
+.certificate-proof figcaption {
+  padding: 10px 4px 2px;
+  color: var(--sage);
+  font-size: 12px;
+  line-height: 1.6;
+}
 .service-card .service-details {
   font-size: 13px;
   margin-top: 18px;
@@ -1719,6 +1735,17 @@ main[id] {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   max-width: 960px;
+}
+.pricing-intro {
+  margin: 28px 0 12px;
+  color: var(--sage);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.pricing-section h2 + .pricing-intro {
+  margin-top: 0;
 }
 .price-card {
   padding: 32px;
@@ -1795,6 +1822,9 @@ main[id] {
   }
   .credential-note {
     padding: 18px;
+  }
+  .certificate-proof {
+    padding: 7px;
   }
   .mobile-booking {
     display: grid;

@@ -76,6 +76,8 @@ for filename, language in [('index.html', 'ka'), ('en.html', 'en'), ('ru.html', 
     assert [(o['price'], o['priceCurrency']) for o in offers] == [(40, 'GEL'), (60, 'GEL'), (35, 'GEL'), (50, 'GEL')]
     assert len(re.findall(r'class="price-card', source)) == 4
     assert len(re.findall(r'class="faq-item"', source)) == 6
+    assert not any(t == 'a' and a.get('href') == '/' for t, a in page.elements), f'{filename}: language link breaks subdirectory hosting'
+    assert not any(t == 'img' and 'sinergia-certificate' in a.get('src', '') for t, a in page.elements), f'{filename}: certificate should only appear on its own page'
     print(f'PASS {filename}: links, assets, headings, languages, prices, schema and FAQ')
 
 for filename, language, home in [('certificate.html', 'ka', 'index.html'), ('certificate-en.html', 'en', 'en.html'), ('certificate-ru.html', 'ru', 'ru.html')]:
@@ -83,6 +85,9 @@ for filename, language, home in [('certificate.html', 'ka', 'index.html'), ('cer
     assert any(t == 'html' and a.get('lang') == language for t, a in page.elements)
     assert sum(t == 'h1' for t, _ in page.elements) == 1
     assert any(t == 'a' and a.get('href') == home + '#about' for t, a in page.elements)
+    assert any(t == 'link' and a.get('rel') == 'canonical' and a.get('href') == BASE + filename for t, a in page.elements)
+    alternates = {a.get('hreflang'): a.get('href') for t, a in page.elements if t == 'link' and a.get('rel') == 'alternate'}
+    assert alternates == {'ka': BASE + 'certificate.html', 'en': BASE + 'certificate-en.html', 'ru': BASE + 'certificate-ru.html', 'x-default': BASE + 'certificate.html'}
     for tag, attrs in page.elements:
         for attr in ('src', 'href'):
             path = urlsplit(attrs.get(attr, ''))
@@ -92,7 +97,7 @@ for filename, language, home in [('certificate.html', 'ka', 'index.html'), ('cer
 
 tree = ET.parse(ROOT / 'sitemap.xml')
 urls = [n.text for n in tree.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
-assert set(urls) == {BASE, BASE + 'en.html', BASE + 'ru.html'}
+assert set(urls) == {BASE, BASE + 'en.html', BASE + 'ru.html', BASE + 'certificate.html', BASE + 'certificate-en.html', BASE + 'certificate-ru.html'}
 assert BASE + 'sitemap.xml' in (ROOT / 'robots.txt').read_text()
 config = json.loads((ROOT / 'vercel.json').read_text())
 assert any(r['source'] == '/index.html' and r['destination'] == '/' for r in config['redirects'])

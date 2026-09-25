@@ -1702,9 +1702,34 @@ main[id] {
 }
 .certificate-proof {
   margin-top: 20px;
-  padding: 10px;
-  background: var(--white);
-  border: 1px solid rgba(138, 110, 53, 0.35);
+  padding: 0;
+  max-width: 460px;
+}
+.certificate-preview {
+  display: block;
+}
+.certificate-frame {
+  display: block;
+  padding: 18px;
+  border: 8px solid #af905b;
+  background: #faf7ef;
+  outline: 1px solid #d6bd82;
+  box-shadow:
+    0 12px 26px #0003,
+    inset 0 0 0 1px #b5aa94;
+}
+.certificate-view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  font-size: 14px;
+  color: var(--paper);
+  border-bottom: 1px solid #d6bd8266;
+}
+.credential-note h3,
+.credential-note p {
+  color: #344333;
 }
 .certificate-proof img {
   width: 100%;
@@ -1722,51 +1747,89 @@ main[id] {
   color: var(--sage);
 }
 .pricing-section {
-  padding: 80px 48px;
+  padding: 88px max(24px, calc((100vw - 1180px) / 2));
   background: var(--cream);
 }
 .pricing-section h2 {
-  font-size: clamp(28px, 4vw, 48px);
-  line-height: 1.35;
-  margin-bottom: 32px;
+  font-family: var(--body);
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 36px;
+  letter-spacing: -0.035em;
 }
-.price-grid {
+.pricing-groups {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
-  max-width: 960px;
+}
+.pricing-group {
+  padding: 30px;
+  background: var(--white);
+  border: 1px solid #d6d3c7;
+  border-radius: 12px;
+}
+.price-grid {
+  display: grid;
+  gap: 0;
 }
 .pricing-intro {
-  margin: 28px 0 12px;
+  margin: 0 0 20px;
   color: var(--sage);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: var(--body);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 .pricing-section h2 + .pricing-intro {
   margin-top: 0;
 }
 .price-card {
-  padding: 32px;
-  border: 1px solid rgba(138, 110, 53, 0.3);
-  background: var(--paper);
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 0;
+  border-top: 1px solid #deddd4;
 }
-.price-card h3 {
-  font-size: 20px;
+.price-card h4 {
+  font-family: var(--body);
+  font-size: 16px;
   font-weight: 500;
 }
 .price-amount {
-  font-size: 48px;
-  line-height: 1.5;
-  margin: 12px 0 24px;
-  color: var(--gold);
+  font-size: 27px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.3;
+  white-space: nowrap;
+  color: #435840;
+}
+.price-card .btn {
+  min-height: 44px;
+  padding: 0 16px;
+  font-size: 12px;
+  letter-spacing: 0;
+  border-radius: 6px;
+}
+.pricing-age-note {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #565b51;
+  border-top: 1px solid #deddd4;
+  padding-top: 18px;
 }
 .pricing-note {
   margin-top: 24px;
   line-height: 1.8;
   max-width: 760px;
   color: #4c5146;
+  font-size: 14px;
+}
+@media (max-width: 960px) {
+  .pricing-groups {
+    grid-template-columns: 1fr;
+  }
 }
 .contact-note {
   font-size: 15px;
@@ -1774,6 +1837,61 @@ main[id] {
   max-width: 760px;
   margin-top: 20px;
   color: rgba(250, 248, 244, 0.85);
+}
+.call-dialog {
+  margin: auto;
+  width: min(460px, calc(100% - 32px));
+  padding: 36px 28px;
+  border: 1px solid #d6d3c7;
+  border-radius: 12px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.call-dialog::backdrop {
+  background: rgb(14 13 11 / 65%);
+}
+.call-dialog h2 {
+  font: 500 23px/1.5 var(--body);
+  padding-right: 20px;
+}
+.call-dialog p {
+  font: 400 14px/1.8 var(--body);
+}
+.call-dialog .call-number {
+  font-size: 26px;
+  margin: 16px 0;
+  color: #435840;
+}
+.call-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+.call-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+.call-actions .btn {
+  padding: 0 18px;
+  letter-spacing: 0;
+  font-size: 12px;
+}
+.call-native {
+  width: 100%;
+  text-decoration: underline;
+  padding: 8px 0;
+  font-size: 14px;
+}
+.call-status {
+  min-height: 26px;
 }
 .mobile-booking {
   display: none;
@@ -1803,19 +1921,23 @@ main[id] {
     padding: 56px 20px;
   }
   .price-grid {
-    gap: 12px;
+    gap: 0;
+  }
+  .pricing-group {
+    padding: 22px 18px;
   }
   .price-card {
-    padding: 22px 14px;
+    padding: 20px 0;
+    gap: 10px;
   }
-  .price-card h3 {
-    font-size: 17px;
+  .price-card h4 {
+    font-size: 14px;
   }
   .price-amount {
-    font-size: 36px;
+    font-size: 24px;
   }
   .price-card .btn {
-    width: 100%;
+    width: auto;
     padding: 0 8px;
     font-size: 11px;
     letter-spacing: 0;

@@ -78,6 +78,18 @@ for filename, language in [('index.html', 'ka'), ('en.html', 'en'), ('ru.html', 
     assert len(re.findall(r'class="faq-item"', source)) == 6
     print(f'PASS {filename}: links, assets, headings, languages, prices, schema and FAQ')
 
+for filename, language, home in [('certificate.html', 'ka', 'index.html'), ('certificate-en.html', 'en', 'en.html'), ('certificate-ru.html', 'ru', 'ru.html')]:
+    page = Page((ROOT / filename).read_text(encoding='utf-8'))
+    assert any(t == 'html' and a.get('lang') == language for t, a in page.elements)
+    assert sum(t == 'h1' for t, _ in page.elements) == 1
+    assert any(t == 'a' and a.get('href') == home + '#about' for t, a in page.elements)
+    for tag, attrs in page.elements:
+        for attr in ('src', 'href'):
+            path = urlsplit(attrs.get(attr, ''))
+            if path.path and not path.scheme and not path.netloc:
+                assert (ROOT / path.path).is_file(), f'{filename}: missing {path.path}'
+    print(f'PASS {filename}: certificate, language and navigation')
+
 tree = ET.parse(ROOT / 'sitemap.xml')
 urls = [n.text for n in tree.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
 assert set(urls) == {BASE, BASE + 'en.html', BASE + 'ru.html'}

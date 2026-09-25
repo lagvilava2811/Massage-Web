@@ -388,15 +388,24 @@
             </p>
           </aside>
           <figure class="certificate-proof reveal">
-            <img
-              alt="Nino Abazadze's SINERGIA Therapeutic Massages and Spa course certificate"
-              decoding="async"
-              height="1200"
-              loading="lazy"
-              src="assets/sinergia-certificate-redacted.jpg"
-              width="1600"
-            />
-            <figcaption>Certificate — identity number redacted.</figcaption>
+            <a
+              class="certificate-preview"
+              href="certificate-en.html"
+              aria-label="View certificate"
+              ><span class="certificate-frame"
+                ><img
+                  alt="Nino Abazadze's SINERGIA Therapeutic Massages and Spa course certificate"
+                  decoding="async"
+                  height="1200"
+                  loading="lazy"
+                  src="assets/sinergia-certificate-redacted.jpg"
+                  width="1600" /></span
+            ></a>
+            <figcaption>
+              <a class="certificate-view" href="certificate-en.html"
+                >View certificate <span aria-hidden="true">↗</span></a
+              >
+            </figcaption>
           </figure>
         </div>
       </section>
@@ -550,43 +559,65 @@
         id="prices"
       >
         <h2 id="prices-title">Session prices</h2>
-        <p class="pricing-intro">Adults</p>
-        <div class="price-grid">
-          <article class="price-card">
-            <h3>30 minutes</h3>
-            <p class="price-amount">40 ₾</p>
-            <a
-              class="btn btn-outline"
-              href="https://wa.me/995571088021?text=Hello%20Nino%2C%20I%20would%20like%20to%20arrange%20a%20visit.%20When%20are%20you%20available%3F"
-              rel="noopener noreferrer"
-              target="_blank"
-              >Book a session</a
-            >
-          </article>
-          <article class="price-card">
-            <h3>45 minutes</h3>
-            <p class="price-amount">60 ₾</p>
-            <a
-              class="btn btn-outline"
-              href="https://wa.me/995571088021?text=Hello%20Nino%2C%20I%20would%20like%20to%20arrange%20a%20visit.%20When%20are%20you%20available%3F"
-              rel="noopener noreferrer"
-              target="_blank"
-              >Book a session</a
-            >
-          </article>
-        </div>
-        <p class="pricing-intro">Pediatric massage</p>
-        <div class="price-grid">
-          <article class="price-card price-card-child">
-            <h3>30 minutes</h3>
-            <p class="price-amount">35 ₾</p>
-            <a class="btn btn-outline" href="#contact">Book</a>
-          </article>
-          <article class="price-card price-card-child">
-            <h3>45 minutes</h3>
-            <p class="price-amount">50 ₾</p>
-            <a class="btn btn-outline" href="#contact">Book</a>
-          </article>
+        <div class="pricing-groups">
+          <div class="pricing-group">
+            <h3 class="pricing-intro">Adults</h3>
+            <div class="price-grid">
+              <article class="price-card">
+                <h4>30 minutes</h4>
+                <p class="price-amount">40 ₾</p>
+                <a
+                  class="btn btn-outline"
+                  href="https://wa.me/995571088021?text=Hello%20Nino%2C%20I%20would%20like%20to%20arrange%20a%20visit.%20When%20are%20you%20available%3F"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Book a session</a
+                >
+              </article>
+              <article class="price-card">
+                <h4>45 minutes</h4>
+                <p class="price-amount">60 ₾</p>
+                <a
+                  class="btn btn-outline"
+                  href="https://wa.me/995571088021?text=Hello%20Nino%2C%20I%20would%20like%20to%20arrange%20a%20visit.%20When%20are%20you%20available%3F"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Book a session</a
+                >
+              </article>
+            </div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-intro">Pediatric massage</h3>
+            <div class="price-grid">
+              <article class="price-card price-card-child">
+                <h4>30 minutes</h4>
+                <p class="price-amount">35 ₾</p>
+                <a
+                  class="btn btn-outline"
+                  href="https://wa.me/995571088021?text=Hello%20Nino%2C%20I%20would%20like%20to%20arrange%20a%20visit.%20When%20are%20you%20available%3F"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Book a session</a
+                >
+              </article>
+              <article class="price-card price-card-child">
+                <h4>45 minutes</h4>
+                <p class="price-amount">50 ₾</p>
+                <a
+                  class="btn btn-outline"
+                  href="https://wa.me/995571088021?text=Hello%20Nino%2C%20I%20would%20like%20to%20arrange%20a%20visit.%20When%20are%20you%20available%3F"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Book a session</a
+                >
+              </article>
+            </div>
+            <p class="pricing-age-note">
+              For infants, discuss the starting age and session length with Nino
+              and your pediatrician before booking.
+            </p>
+          </div>
         </div>
         <p class="pricing-note">
           Prices are in Georgian lari. Session length and approach depend on the

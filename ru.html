@@ -389,15 +389,24 @@
             </p>
           </aside>
           <figure class="certificate-proof reveal">
-            <img
-              alt="Сертификат Нино Абазадзе о завершении курса лечебного и спа-массажа центра «Синергия»"
-              decoding="async"
-              height="1200"
-              loading="lazy"
-              src="assets/sinergia-certificate-redacted.jpg"
-              width="1600"
-            />
-            <figcaption>Сертификат — личный номер скрыт.</figcaption>
+            <a
+              class="certificate-preview"
+              href="certificate-ru.html"
+              aria-label="Посмотреть сертификат"
+              ><span class="certificate-frame"
+                ><img
+                  alt="Сертификат Нино Абазадзе о завершении курса лечебного и спа-массажа центра «Синергия»"
+                  decoding="async"
+                  height="1200"
+                  loading="lazy"
+                  src="assets/sinergia-certificate-redacted.jpg"
+                  width="1600" /></span
+            ></a>
+            <figcaption>
+              <a class="certificate-view" href="certificate-ru.html"
+                >Посмотреть сертификат <span aria-hidden="true">↗</span></a
+              >
+            </figcaption>
           </figure>
         </div>
       </section>
@@ -552,43 +561,65 @@
         id="prices"
       >
         <h2 id="prices-title">Стоимость сеанса</h2>
-        <p class="pricing-intro">Для взрослых</p>
-        <div class="price-grid">
-          <article class="price-card">
-            <h3>30 минут</h3>
-            <p class="price-amount">40 ₾</p>
-            <a
-              class="btn btn-outline"
-              href="https://wa.me/995571088021?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9D%D0%B8%D0%BD%D0%BE%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%B8%D1%91%D0%BC.%20%D0%9A%D0%BE%D0%B3%D0%B4%D0%B0%20%D0%B5%D1%81%D1%82%D1%8C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%3F"
-              rel="noopener noreferrer"
-              target="_blank"
-              >Записаться</a
-            >
-          </article>
-          <article class="price-card">
-            <h3>45 минут</h3>
-            <p class="price-amount">60 ₾</p>
-            <a
-              class="btn btn-outline"
-              href="https://wa.me/995571088021?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9D%D0%B8%D0%BD%D0%BE%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%B8%D1%91%D0%BC.%20%D0%9A%D0%BE%D0%B3%D0%B4%D0%B0%20%D0%B5%D1%81%D1%82%D1%8C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%3F"
-              rel="noopener noreferrer"
-              target="_blank"
-              >Записаться</a
-            >
-          </article>
-        </div>
-        <p class="pricing-intro">Детский массаж</p>
-        <div class="price-grid">
-          <article class="price-card price-card-child">
-            <h3>30 минут</h3>
-            <p class="price-amount">35 ₾</p>
-            <a class="btn btn-outline" href="#contact">Записаться</a>
-          </article>
-          <article class="price-card price-card-child">
-            <h3>45 минут</h3>
-            <p class="price-amount">50 ₾</p>
-            <a class="btn btn-outline" href="#contact">Записаться</a>
-          </article>
+        <div class="pricing-groups">
+          <div class="pricing-group">
+            <h3 class="pricing-intro">Для взрослых</h3>
+            <div class="price-grid">
+              <article class="price-card">
+                <h4>30 минут</h4>
+                <p class="price-amount">40 ₾</p>
+                <a
+                  class="btn btn-outline"
+                  href="https://wa.me/995571088021?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9D%D0%B8%D0%BD%D0%BE%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%B8%D1%91%D0%BC.%20%D0%9A%D0%BE%D0%B3%D0%B4%D0%B0%20%D0%B5%D1%81%D1%82%D1%8C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%3F"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Записаться</a
+                >
+              </article>
+              <article class="price-card">
+                <h4>45 минут</h4>
+                <p class="price-amount">60 ₾</p>
+                <a
+                  class="btn btn-outline"
+                  href="https://wa.me/995571088021?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9D%D0%B8%D0%BD%D0%BE%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%B8%D1%91%D0%BC.%20%D0%9A%D0%BE%D0%B3%D0%B4%D0%B0%20%D0%B5%D1%81%D1%82%D1%8C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%3F"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Записаться</a
+                >
+              </article>
+            </div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-intro">Детский массаж</h3>
+            <div class="price-grid">
+              <article class="price-card price-card-child">
+                <h4>30 минут</h4>
+                <p class="price-amount">35 ₾</p>
+                <a
+                  class="btn btn-outline"
+                  href="https://wa.me/995571088021?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9D%D0%B8%D0%BD%D0%BE%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%B8%D1%91%D0%BC.%20%D0%9A%D0%BE%D0%B3%D0%B4%D0%B0%20%D0%B5%D1%81%D1%82%D1%8C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%3F"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Записаться</a
+                >
+              </article>
+              <article class="price-card price-card-child">
+                <h4>45 минут</h4>
+                <p class="price-amount">50 ₾</p>
+                <a
+                  class="btn btn-outline"
+                  href="https://wa.me/995571088021?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9D%D0%B8%D0%BD%D0%BE%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%B8%D1%91%D0%BC.%20%D0%9A%D0%BE%D0%B3%D0%B4%D0%B0%20%D0%B5%D1%81%D1%82%D1%8C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%3F"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Записаться</a
+                >
+              </article>
+            </div>
+            <p class="pricing-age-note">
+              Для грудных детей заранее согласуйте возраст начала массажа и
+              длительность сеанса с Нино и педиатром.
+            </p>
+          </div>
         </div>
         <p class="pricing-note">
           Цены указаны в грузинских лари. Продолжительность и метод сеанса

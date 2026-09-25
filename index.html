@@ -431,15 +431,24 @@
             </p>
           </aside>
           <figure class="certificate-proof reveal">
-            <img
-              alt="ნინო აბაზაძის „სინერგიის“ სამკურნალო და სპა მასაჟების კურსის სერტიფიკატი"
-              decoding="async"
-              height="1200"
-              loading="lazy"
-              src="assets/sinergia-certificate-redacted.jpg"
-              width="1600"
-            />
-            <figcaption>სერტიფიკატი — პირადი ნომერი დაფარულია.</figcaption>
+            <a
+              class="certificate-preview"
+              href="certificate.html"
+              aria-label="სერტიფიკატის ნახვა"
+              ><span class="certificate-frame"
+                ><img
+                  alt="ნინო აბაზაძის „სინერგიის“ სამკურნალო და სპა მასაჟების კურსის სერტიფიკატი"
+                  decoding="async"
+                  height="1200"
+                  loading="lazy"
+                  src="assets/sinergia-certificate-redacted.jpg"
+                  width="1600" /></span
+            ></a>
+            <figcaption>
+              <a class="certificate-view" href="certificate.html"
+                >სერტიფიკატის ნახვა <span aria-hidden="true">↗</span></a
+              >
+            </figcaption>
           </figure>
         </div>
       </section>
@@ -597,43 +606,65 @@
         id="prices"
       >
         <h2 id="prices-title">სესიის ღირებულება</h2>
-        <p class="pricing-intro">ზრდასრულები</p>
-        <div class="price-grid">
-          <article class="price-card">
-            <h3>30 წუთი</h3>
-            <p class="price-amount">40 ₾</p>
-            <a
-              class="btn btn-outline"
-              href="https://wa.me/995571088021?text=%E1%83%92%E1%83%90%E1%83%9B%E1%83%90%E1%83%A0%E1%83%AF%E1%83%9D%E1%83%91%E1%83%90%2C%20%E1%83%9C%E1%83%98%E1%83%9C%E1%83%9D.%20%E1%83%9B%E1%83%A1%E1%83%A3%E1%83%A0%E1%83%A1%20%E1%83%95%E1%83%98%E1%83%96%E1%83%98%E1%83%A2%E1%83%96%E1%83%94%20%E1%83%A9%E1%83%90%E1%83%AC%E1%83%94%E1%83%A0%E1%83%90.%20%E1%83%A0%E1%83%9D%E1%83%93%E1%83%98%E1%83%A1%20%E1%83%92%E1%83%90%E1%83%A5%E1%83%95%E1%83%97%20%E1%83%97%E1%83%90%E1%83%95%E1%83%98%E1%83%A1%E1%83%A3%E1%83%A4%E1%83%90%E1%83%9A%E1%83%98%20%E1%83%93%E1%83%A0%E1%83%9D%3F"
-              rel="noopener noreferrer"
-              target="_blank"
-              >ჩაწერა</a
-            >
-          </article>
-          <article class="price-card">
-            <h3>45 წუთი</h3>
-            <p class="price-amount">60 ₾</p>
-            <a
-              class="btn btn-outline"
-              href="https://wa.me/995571088021?text=%E1%83%92%E1%83%90%E1%83%9B%E1%83%90%E1%83%A0%E1%83%AF%E1%83%9D%E1%83%91%E1%83%90%2C%20%E1%83%9C%E1%83%98%E1%83%9C%E1%83%9D.%20%E1%83%9B%E1%83%A1%E1%83%A3%E1%83%A0%E1%83%A1%20%E1%83%95%E1%83%98%E1%83%96%E1%83%98%E1%83%A2%E1%83%96%E1%83%94%20%E1%83%A9%E1%83%90%E1%83%AC%E1%83%94%E1%83%A0%E1%83%90.%20%E1%83%A0%E1%83%9D%E1%83%93%E1%83%98%E1%83%A1%20%E1%83%92%E1%83%90%E1%83%A5%E1%83%95%E1%83%97%20%E1%83%97%E1%83%90%E1%83%95%E1%83%98%E1%83%A1%E1%83%A3%E1%83%A4%E1%83%90%E1%83%9A%E1%83%98%20%E1%83%93%E1%83%A0%E1%83%9D%3F"
-              rel="noopener noreferrer"
-              target="_blank"
-              >ჩაწერა</a
-            >
-          </article>
-        </div>
-        <p class="pricing-intro">ბავშვთა მასაჟი</p>
-        <div class="price-grid">
-          <article class="price-card price-card-child">
-            <h3>30 წუთი</h3>
-            <p class="price-amount">35 ₾</p>
-            <a class="btn btn-outline" href="#contact">ჩაწერა</a>
-          </article>
-          <article class="price-card price-card-child">
-            <h3>45 წუთი</h3>
-            <p class="price-amount">50 ₾</p>
-            <a class="btn btn-outline" href="#contact">ჩაწერა</a>
-          </article>
+        <div class="pricing-groups">
+          <div class="pricing-group">
+            <h3 class="pricing-intro">ზრდასრულები</h3>
+            <div class="price-grid">
+              <article class="price-card">
+                <h4>30 წუთი</h4>
+                <p class="price-amount">40 ₾</p>
+                <a
+                  class="btn btn-outline"
+                  href="https://wa.me/995571088021?text=%E1%83%92%E1%83%90%E1%83%9B%E1%83%90%E1%83%A0%E1%83%AF%E1%83%9D%E1%83%91%E1%83%90%2C%20%E1%83%9C%E1%83%98%E1%83%9C%E1%83%9D.%20%E1%83%9B%E1%83%A1%E1%83%A3%E1%83%A0%E1%83%A1%20%E1%83%95%E1%83%98%E1%83%96%E1%83%98%E1%83%A2%E1%83%96%E1%83%94%20%E1%83%A9%E1%83%90%E1%83%AC%E1%83%94%E1%83%A0%E1%83%90.%20%E1%83%A0%E1%83%9D%E1%83%93%E1%83%98%E1%83%A1%20%E1%83%92%E1%83%90%E1%83%A5%E1%83%95%E1%83%97%20%E1%83%97%E1%83%90%E1%83%95%E1%83%98%E1%83%A1%E1%83%A3%E1%83%A4%E1%83%90%E1%83%9A%E1%83%98%20%E1%83%93%E1%83%A0%E1%83%9D%3F"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >ჩაწერა</a
+                >
+              </article>
+              <article class="price-card">
+                <h4>45 წუთი</h4>
+                <p class="price-amount">60 ₾</p>
+                <a
+                  class="btn btn-outline"
+                  href="https://wa.me/995571088021?text=%E1%83%92%E1%83%90%E1%83%9B%E1%83%90%E1%83%A0%E1%83%AF%E1%83%9D%E1%83%91%E1%83%90%2C%20%E1%83%9C%E1%83%98%E1%83%9C%E1%83%9D.%20%E1%83%9B%E1%83%A1%E1%83%A3%E1%83%A0%E1%83%A1%20%E1%83%95%E1%83%98%E1%83%96%E1%83%98%E1%83%A2%E1%83%96%E1%83%94%20%E1%83%A9%E1%83%90%E1%83%AC%E1%83%94%E1%83%A0%E1%83%90.%20%E1%83%A0%E1%83%9D%E1%83%93%E1%83%98%E1%83%A1%20%E1%83%92%E1%83%90%E1%83%A5%E1%83%95%E1%83%97%20%E1%83%97%E1%83%90%E1%83%95%E1%83%98%E1%83%A1%E1%83%A3%E1%83%A4%E1%83%90%E1%83%9A%E1%83%98%20%E1%83%93%E1%83%A0%E1%83%9D%3F"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >ჩაწერა</a
+                >
+              </article>
+            </div>
+          </div>
+          <div class="pricing-group">
+            <h3 class="pricing-intro">ბავშვთა მასაჟი</h3>
+            <div class="price-grid">
+              <article class="price-card price-card-child">
+                <h4>30 წუთი</h4>
+                <p class="price-amount">35 ₾</p>
+                <a
+                  class="btn btn-outline"
+                  href="https://wa.me/995571088021?text=%E1%83%92%E1%83%90%E1%83%9B%E1%83%90%E1%83%A0%E1%83%AF%E1%83%9D%E1%83%91%E1%83%90%2C%20%E1%83%9C%E1%83%98%E1%83%9C%E1%83%9D.%20%E1%83%9B%E1%83%A1%E1%83%A3%E1%83%A0%E1%83%A1%20%E1%83%95%E1%83%98%E1%83%96%E1%83%98%E1%83%A2%E1%83%96%E1%83%94%20%E1%83%A9%E1%83%90%E1%83%AC%E1%83%94%E1%83%A0%E1%83%90.%20%E1%83%A0%E1%83%9D%E1%83%93%E1%83%98%E1%83%A1%20%E1%83%92%E1%83%90%E1%83%A5%E1%83%95%E1%83%97%20%E1%83%97%E1%83%90%E1%83%95%E1%83%98%E1%83%A1%E1%83%A3%E1%83%A4%E1%83%90%E1%83%9A%E1%83%98%20%E1%83%93%E1%83%A0%E1%83%9D%3F"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >ჩაწერა</a
+                >
+              </article>
+              <article class="price-card price-card-child">
+                <h4>45 წუთი</h4>
+                <p class="price-amount">50 ₾</p>
+                <a
+                  class="btn btn-outline"
+                  href="https://wa.me/995571088021?text=%E1%83%92%E1%83%90%E1%83%9B%E1%83%90%E1%83%A0%E1%83%AF%E1%83%9D%E1%83%91%E1%83%90%2C%20%E1%83%9C%E1%83%98%E1%83%9C%E1%83%9D.%20%E1%83%9B%E1%83%A1%E1%83%A3%E1%83%A0%E1%83%A1%20%E1%83%95%E1%83%98%E1%83%96%E1%83%98%E1%83%A2%E1%83%96%E1%83%94%20%E1%83%A9%E1%83%90%E1%83%AC%E1%83%94%E1%83%A0%E1%83%90.%20%E1%83%A0%E1%83%9D%E1%83%93%E1%83%98%E1%83%A1%20%E1%83%92%E1%83%90%E1%83%A5%E1%83%95%E1%83%97%20%E1%83%97%E1%83%90%E1%83%95%E1%83%98%E1%83%A1%E1%83%A3%E1%83%A4%E1%83%90%E1%83%9A%E1%83%98%20%E1%83%93%E1%83%A0%E1%83%9D%3F"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >ჩაწერა</a
+                >
+              </article>
+            </div>
+            <p class="pricing-age-note">
+              ჩვილისთვის მასაჟის დაწყების ასაკი და სესიის ხანგრძლივობა წინასწარ
+              შეათანხმეთ ნინოსთან და პედიატრთან.
+            </p>
+          </div>
         </div>
         <p class="pricing-note">
           ფასები მოცემულია ლარში. სესიის ხანგრძლივობა და მეთოდი განისაზღვრება

@@ -97,7 +97,15 @@ for filename, language, home in [('certificate.html', 'ka', 'index.html'), ('cer
 
 tree = ET.parse(ROOT / 'sitemap.xml')
 urls = [n.text for n in tree.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
-assert set(urls) == {BASE, BASE + 'en.html', BASE + 'ru.html', BASE + 'certificate.html', BASE + 'certificate-en.html', BASE + 'certificate-ru.html'}
+assert set(urls) == {BASE, BASE + 'en.html', BASE + 'ru.html', BASE + 'certificate.html', BASE + 'certificate-en.html', BASE + 'certificate-ru.html', BASE + 'articles.html', BASE + 'child-massage-kutaisi.html', BASE + 'rehabilitation-kutaisi.html', BASE + 'therapeutic-massage-kutaisi.html'}
+for filename in ['articles.html', 'child-massage-kutaisi.html', 'rehabilitation-kutaisi.html', 'therapeutic-massage-kutaisi.html']:
+    source = (ROOT / filename).read_text(encoding='utf-8')
+    page = Page(source)
+    assert any(t == 'html' and a.get('lang') == 'ka' for t, a in page.elements)
+    assert sum(t == 'h1' for t, _ in page.elements) == 1
+    assert any(t == 'link' and a.get('rel') == 'canonical' and a.get('href') == BASE + filename for t, a in page.elements)
+    assert 'application/ld+json' in source
+    print(f'PASS {filename}: article metadata and structure')
 assert BASE + 'sitemap.xml' in (ROOT / 'robots.txt').read_text()
 config = json.loads((ROOT / 'vercel.json').read_text())
 assert any(r['source'] == '/index.html' and r['destination'] == '/' for r in config['redirects'])

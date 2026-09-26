@@ -97,8 +97,8 @@ for filename, language, home in [('certificate.html', 'ka', 'index.html'), ('cer
 
 tree = ET.parse(ROOT / 'sitemap.xml')
 urls = [n.text for n in tree.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
-assert set(urls) == {BASE, BASE + 'en.html', BASE + 'ru.html', BASE + 'certificate.html', BASE + 'certificate-en.html', BASE + 'certificate-ru.html', BASE + 'articles.html', BASE + 'child-massage-kutaisi.html', BASE + 'rehabilitation-kutaisi.html', BASE + 'therapeutic-massage-kutaisi.html'}
-for filename in ['articles.html', 'child-massage-kutaisi.html', 'rehabilitation-kutaisi.html', 'therapeutic-massage-kutaisi.html']:
+assert set(urls) == {BASE, BASE + 'en.html', BASE + 'ru.html', BASE + 'certificate.html', BASE + 'certificate-en.html', BASE + 'certificate-ru.html', BASE + 'articles.html', BASE + 'child-massage-kutaisi.html', BASE + 'adult-massage-kutaisi.html', BASE + 'rehabilitation-kutaisi.html', BASE + 'first-visit-massage-kutaisi.html', BASE + 'therapeutic-massage-kutaisi.html'}
+for filename in ['articles.html', 'child-massage-kutaisi.html', 'adult-massage-kutaisi.html', 'rehabilitation-kutaisi.html', 'therapeutic-massage-kutaisi.html', 'first-visit-massage-kutaisi.html']:
     source = (ROOT / filename).read_text(encoding='utf-8')
     page = Page(source)
     assert any(t == 'html' and a.get('lang') == 'ka' for t, a in page.elements)

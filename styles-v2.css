@@ -441,17 +441,6 @@ img {
   text-transform: uppercase;
   opacity: 0.58;
 }
-.reveal {
-  opacity: 1;
-  transform: none;
-  transition:
-    opacity 0.8s var(--ease),
-    transform 0.8s var(--ease);
-}
-.reveal.visible {
-  opacity: 1;
-  transform: none;
-}
 .about-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -964,10 +953,6 @@ img {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
-  }
-  .reveal {
-    opacity: 1;
-    transform: none;
   }
   .cursor {
     display: none;
@@ -1658,7 +1643,7 @@ img {
   }
 }
 
-/* Booking and accessible navigation work independently of reveal animations. */
+/* Booking and accessible navigation. */
 section[id],
 main[id] {
   scroll-margin-top: 100px;

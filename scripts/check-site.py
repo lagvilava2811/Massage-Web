@@ -9,6 +9,23 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://ninoabazadze.ge/'
+PUBLIC_ROUTES = {
+    '': 'index.html', 'en': 'en.html', 'ru': 'ru.html',
+    'certificate': 'certificate.html', 'certificate-en': 'certificate-en.html', 'certificate-ru': 'certificate-ru.html',
+    'articles': 'articles.html', 'child-massage-kutaisi': 'child-massage-kutaisi.html',
+    'adult-massage-kutaisi': 'adult-massage-kutaisi.html', 'rehabilitation-kutaisi': 'rehabilitation-kutaisi.html',
+    'therapeutic-massage-kutaisi': 'therapeutic-massage-kutaisi.html', 'first-visit-massage-kutaisi': 'first-visit-massage-kutaisi.html',
+}
+
+def public_url(filename):
+    route = next(route for route, source in PUBLIC_ROUTES.items() if source == filename)
+    return BASE + route
+
+def source_for_url(path):
+    route = path.strip('/')
+    if route in PUBLIC_ROUTES:
+        return ROOT / PUBLIC_ROUTES[route]
+    return ROOT / path.lstrip('/')
 
 class Page(HTMLParser):
     def __init__(self, source):
@@ -41,10 +58,10 @@ for filename, language in [('index.html', 'ka'), ('en.html', 'en'), ('ru.html', 
     assert all(n == 1 for n in Counter(ids).values()), f'{filename}: duplicate IDs'
     assert sum(t == 'h1' for t, _ in page.elements) == 1
     assert any(t == 'html' and a.get('lang') == language for t, a in page.elements)
-    canonical = BASE if language == 'ka' else BASE + filename
+    canonical = public_url(filename)
     assert any(t == 'link' and a.get('rel') == 'canonical' and a.get('href') == canonical for t, a in page.elements)
     alternates = {a.get('hreflang'): a.get('href') for t, a in page.elements if t == 'link' and a.get('rel') == 'alternate'}
-    assert alternates == {'ka': BASE, 'en': BASE + 'en.html', 'ru': BASE + 'ru.html', 'x-default': BASE}
+    assert alternates == {'ka': BASE, 'en': BASE + 'en', 'ru': BASE + 'ru', 'x-default': BASE}
     assert not re.search(r'10\+|E-E-A-T|Local SEO|ლოკალური SEO|Локальный SEO|local search intent', source)
     assert not re.search(r'<meta[^>]+content=["\'][^"\']*noindex', source)
     for tag, attrs in page.elements:
@@ -61,7 +78,7 @@ for filename, language in [('index.html', 'ka'), ('en.html', 'en'), ('ru.html', 
                 continue
             path = unquote(parsed.path)
             if path:
-                target = ROOT / path.lstrip('/') if path != '/' else ROOT / 'index.html'
+                target = source_for_url(path)
                 assert target.is_file(), f'{filename}: missing {target}'
             if parsed.fragment and not path:
                 assert parsed.fragment in ids, f'{filename}: broken anchor {value}'
@@ -76,37 +93,35 @@ for filename, language in [('index.html', 'ka'), ('en.html', 'en'), ('ru.html', 
     assert [(o['price'], o['priceCurrency']) for o in offers] == [(40, 'GEL'), (60, 'GEL'), (35, 'GEL'), (50, 'GEL')]
     assert len(re.findall(r'class="price-card', source)) == 4
     assert len(re.findall(r'class="faq-item"', source)) == 6
-    assert not any(t == 'a' and a.get('href') == '/' for t, a in page.elements), f'{filename}: language link breaks subdirectory hosting'
     assert not any(t == 'img' and 'sinergia-certificate' in a.get('src', '') for t, a in page.elements), f'{filename}: certificate should only appear on its own page'
     print(f'PASS {filename}: links, assets, headings, languages, prices, schema and FAQ')
 
-for filename, language, home in [('certificate.html', 'ka', 'index.html'), ('certificate-en.html', 'en', 'en.html'), ('certificate-ru.html', 'ru', 'ru.html')]:
+for filename, language, home in [('certificate.html', 'ka', '/'), ('certificate-en.html', 'en', '/en'), ('certificate-ru.html', 'ru', '/ru')]:
     page = Page((ROOT / filename).read_text(encoding='utf-8'))
     assert any(t == 'html' and a.get('lang') == language for t, a in page.elements)
     assert sum(t == 'h1' for t, _ in page.elements) == 1
     assert any(t == 'a' and a.get('href') == home + '#about' for t, a in page.elements)
-    assert any(t == 'link' and a.get('rel') == 'canonical' and a.get('href') == BASE + filename for t, a in page.elements)
+    assert any(t == 'link' and a.get('rel') == 'canonical' and a.get('href') == public_url(filename) for t, a in page.elements)
     alternates = {a.get('hreflang'): a.get('href') for t, a in page.elements if t == 'link' and a.get('rel') == 'alternate'}
-    assert alternates == {'ka': BASE + 'certificate.html', 'en': BASE + 'certificate-en.html', 'ru': BASE + 'certificate-ru.html', 'x-default': BASE + 'certificate.html'}
+    assert alternates == {'ka': BASE + 'certificate', 'en': BASE + 'certificate-en', 'ru': BASE + 'certificate-ru', 'x-default': BASE + 'certificate'}
     for tag, attrs in page.elements:
         for attr in ('src', 'href'):
             path = urlsplit(attrs.get(attr, ''))
             if path.path and not path.scheme and not path.netloc:
-                assert (ROOT / path.path).is_file(), f'{filename}: missing {path.path}'
+                assert source_for_url(path.path).is_file(), f'{filename}: missing {path.path}'
     print(f'PASS {filename}: certificate, language and navigation')
 
 tree = ET.parse(ROOT / 'sitemap.xml')
 urls = [n.text for n in tree.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
-assert set(urls) == {BASE, BASE + 'en.html', BASE + 'ru.html', BASE + 'certificate.html', BASE + 'certificate-en.html', BASE + 'certificate-ru.html', BASE + 'articles.html', BASE + 'child-massage-kutaisi.html', BASE + 'adult-massage-kutaisi.html', BASE + 'rehabilitation-kutaisi.html', BASE + 'first-visit-massage-kutaisi.html', BASE + 'therapeutic-massage-kutaisi.html'}
+assert set(urls) == {BASE + route for route in PUBLIC_ROUTES}
 for filename in ['articles.html', 'child-massage-kutaisi.html', 'adult-massage-kutaisi.html', 'rehabilitation-kutaisi.html', 'therapeutic-massage-kutaisi.html', 'first-visit-massage-kutaisi.html']:
     source = (ROOT / filename).read_text(encoding='utf-8')
     page = Page(source)
     assert any(t == 'html' and a.get('lang') == 'ka' for t, a in page.elements)
     assert sum(t == 'h1' for t, _ in page.elements) == 1
-    assert any(t == 'link' and a.get('rel') == 'canonical' and a.get('href') == BASE + filename for t, a in page.elements)
+    assert any(t == 'link' and a.get('rel') == 'canonical' and a.get('href') == public_url(filename) for t, a in page.elements)
     assert 'application/ld+json' in source
     print(f'PASS {filename}: article metadata and structure')
 assert BASE + 'sitemap.xml' in (ROOT / 'robots.txt').read_text()
-config = json.loads((ROOT / 'vercel.json').read_text())
-assert any(r['source'] == '/index.html' and r['destination'] == '/' for r in config['redirects'])
-print('PASS sitemap, robots and canonical redirect')
+assert '/index.html / 301' in (ROOT / '_redirects').read_text()
+print('PASS sitemap, robots and clean URLs')

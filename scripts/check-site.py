@@ -17,6 +17,8 @@ PUBLIC_ROUTES = {
     'therapeutic-massage-kutaisi': 'therapeutic-massage-kutaisi.html', 'first-visit-massage-kutaisi': 'first-visit-massage-kutaisi.html',
 }
 
+assert (ROOT / '404.html').is_file(), 'missing top-level 404.html'
+
 def public_url(filename):
     route = next(route for route, source in PUBLIC_ROUTES.items() if source == filename)
     return BASE + route
@@ -124,4 +126,7 @@ for filename in ['articles.html', 'child-massage-kutaisi.html', 'adult-massage-k
     print(f'PASS {filename}: article metadata and structure')
 assert BASE + 'sitemap.xml' in (ROOT / 'robots.txt').read_text()
 assert '/index.html / 301' in (ROOT / '_redirects').read_text()
+not_found = Page((ROOT / '404.html').read_text(encoding='utf-8'))
+assert any(t == 'meta' and a.get('name') == 'robots' and 'noindex' in a.get('content', '') for t, a in not_found.elements)
+assert sum(t == 'h1' for t, _ in not_found.elements) == 1
 print('PASS sitemap, robots and clean URLs')

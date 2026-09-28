@@ -15,6 +15,12 @@ PUBLIC_ROUTES = {
     'articles': 'articles.html', 'child-massage-kutaisi': 'child-massage-kutaisi.html',
     'adult-massage-kutaisi': 'adult-massage-kutaisi.html', 'rehabilitation-kutaisi': 'rehabilitation-kutaisi.html',
     'therapeutic-massage-kutaisi': 'therapeutic-massage-kutaisi.html', 'first-visit-massage-kutaisi': 'first-visit-massage-kutaisi.html',
+    'articles-en': 'articles-en.html', 'articles-ru': 'articles-ru.html',
+    'child-massage-kutaisi-en': 'child-massage-kutaisi-en.html', 'child-massage-kutaisi-ru': 'child-massage-kutaisi-ru.html',
+    'adult-massage-kutaisi-en': 'adult-massage-kutaisi-en.html', 'adult-massage-kutaisi-ru': 'adult-massage-kutaisi-ru.html',
+    'rehabilitation-kutaisi-en': 'rehabilitation-kutaisi-en.html', 'rehabilitation-kutaisi-ru': 'rehabilitation-kutaisi-ru.html',
+    'therapeutic-massage-kutaisi-en': 'therapeutic-massage-kutaisi-en.html', 'therapeutic-massage-kutaisi-ru': 'therapeutic-massage-kutaisi-ru.html',
+    'first-visit-massage-kutaisi-en': 'first-visit-massage-kutaisi-en.html', 'first-visit-massage-kutaisi-ru': 'first-visit-massage-kutaisi-ru.html',
 }
 
 assert (ROOT / '404.html').is_file(), 'missing top-level 404.html'
@@ -116,10 +122,10 @@ for filename, language, home in [('certificate.html', 'ka', '/'), ('certificate-
 tree = ET.parse(ROOT / 'sitemap.xml')
 urls = [n.text for n in tree.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
 assert set(urls) == {BASE + route for route in PUBLIC_ROUTES}
-for filename in ['articles.html', 'child-massage-kutaisi.html', 'adult-massage-kutaisi.html', 'rehabilitation-kutaisi.html', 'therapeutic-massage-kutaisi.html', 'first-visit-massage-kutaisi.html']:
+for filename, language in [(source, 'ka' if not source.endswith(('-en.html', '-ru.html')) else ('en' if source.endswith('-en.html') else 'ru')) for source in PUBLIC_ROUTES.values() if source.startswith(('articles', 'child-', 'adult-', 'rehabilitation-', 'therapeutic-', 'first-'))]:
     source = (ROOT / filename).read_text(encoding='utf-8')
     page = Page(source)
-    assert any(t == 'html' and a.get('lang') == 'ka' for t, a in page.elements)
+    assert any(t == 'html' and a.get('lang') == language for t, a in page.elements)
     assert sum(t == 'h1' for t, _ in page.elements) == 1
     assert any(t == 'link' and a.get('rel') == 'canonical' and a.get('href') == public_url(filename) for t, a in page.elements)
     assert 'application/ld+json' in source

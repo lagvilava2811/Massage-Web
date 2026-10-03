@@ -32,6 +32,13 @@ ARTICLE_ROUTE_GROUPS = (
     ('first-visit-massage-kutaisi', 'first-visit-massage-kutaisi-en', 'first-visit-massage-kutaisi-ru'),
 )
 
+# Informational pages may be public but intentionally excluded from the SEO sitemap.
+AUXILIARY_ROUTES = {
+    'privacy': 'privacy.html',
+    'privacy-en': 'privacy-en.html',
+    'privacy-ru': 'privacy-ru.html',
+}
+
 assert (ROOT / '404.html').is_file(), 'missing top-level 404.html'
 
 def public_url(filename):
@@ -42,6 +49,8 @@ def source_for_url(path):
     route = path.strip('/')
     if route in PUBLIC_ROUTES:
         return ROOT / PUBLIC_ROUTES[route]
+    if route in AUXILIARY_ROUTES:
+        return ROOT / AUXILIARY_ROUTES[route]
     return ROOT / path.lstrip('/')
 
 class Page(HTMLParser):

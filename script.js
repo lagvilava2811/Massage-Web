@@ -1,4 +1,27 @@
 const header = document.getElementById("header");
+// One central Google Analytics setup covers every public page that loads this script.
+const GA_MEASUREMENT_ID = "G-XEXKSEHK3L";
+window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function gtag() {
+  window.dataLayer.push(arguments);
+};
+window.gtag("js", new Date());
+window.gtag("config", GA_MEASUREMENT_ID);
+const analyticsScript = document.createElement("script");
+analyticsScript.async = true;
+analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+document.head.append(analyticsScript);
+
+document.addEventListener("click", (event) => {
+  const link = event.target.closest("a[href]");
+  if (!link) return;
+  const href = link.href;
+  if (href.startsWith("tel:")) {
+    window.gtag("event", "contact_click", { contact_method: "phone" });
+  } else if (href.includes("wa.me/")) {
+    window.gtag("event", "contact_click", { contact_method: "whatsapp" });
+  }
+});
 // Desktop browsers may have no telephone handler. Always show the number
 // and alternatives there; touch devices retain the native tel: link.
 const callCopy = {

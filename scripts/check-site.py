@@ -23,6 +23,15 @@ PUBLIC_ROUTES = {
     'first-visit-massage-kutaisi-en': 'first-visit-massage-kutaisi-en.html', 'first-visit-massage-kutaisi-ru': 'first-visit-massage-kutaisi-ru.html',
 }
 
+ARTICLE_ROUTE_GROUPS = (
+    ('articles', 'articles-en', 'articles-ru'),
+    ('child-massage-kutaisi', 'child-massage-kutaisi-en', 'child-massage-kutaisi-ru'),
+    ('adult-massage-kutaisi', 'adult-massage-kutaisi-en', 'adult-massage-kutaisi-ru'),
+    ('rehabilitation-kutaisi', 'rehabilitation-kutaisi-en', 'rehabilitation-kutaisi-ru'),
+    ('therapeutic-massage-kutaisi', 'therapeutic-massage-kutaisi-en', 'therapeutic-massage-kutaisi-ru'),
+    ('first-visit-massage-kutaisi', 'first-visit-massage-kutaisi-en', 'first-visit-massage-kutaisi-ru'),
+)
+
 assert (ROOT / '404.html').is_file(), 'missing top-level 404.html'
 
 def public_url(filename):
@@ -122,14 +131,24 @@ for filename, language, home in [('certificate.html', 'ka', '/'), ('certificate-
 tree = ET.parse(ROOT / 'sitemap.xml')
 urls = [n.text for n in tree.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
 assert set(urls) == {BASE + route for route in PUBLIC_ROUTES}
-for filename, language in [(source, 'ka' if not source.endswith(('-en.html', '-ru.html')) else ('en' if source.endswith('-en.html') else 'ru')) for source in PUBLIC_ROUTES.values() if source.startswith(('articles', 'child-', 'adult-', 'rehabilitation-', 'therapeutic-', 'first-'))]:
-    source = (ROOT / filename).read_text(encoding='utf-8')
-    page = Page(source)
-    assert any(t == 'html' and a.get('lang') == language for t, a in page.elements)
-    assert sum(t == 'h1' for t, _ in page.elements) == 1
-    assert any(t == 'link' and a.get('rel') == 'canonical' and a.get('href') == public_url(filename) for t, a in page.elements)
-    assert 'application/ld+json' in source
-    print(f'PASS {filename}: article metadata and structure')
+for routes in ARTICLE_ROUTE_GROUPS:
+    expected_alternates = {
+        'ka': BASE + routes[0],
+        'en': BASE + routes[1],
+        'ru': BASE + routes[2],
+        'x-default': BASE + routes[0],
+    }
+    for route, language in zip(routes, ('ka', 'en', 'ru')):
+        filename = PUBLIC_ROUTES[route]
+        source = (ROOT / filename).read_text(encoding='utf-8')
+        page = Page(source)
+        assert any(t == 'html' and a.get('lang') == language for t, a in page.elements)
+        assert sum(t == 'h1' for t, _ in page.elements) == 1
+        assert any(t == 'link' and a.get('rel') == 'canonical' and a.get('href') == BASE + route for t, a in page.elements)
+        alternates = {a.get('hreflang'): a.get('href') for t, a in page.elements if t == 'link' and a.get('rel') == 'alternate'}
+        assert alternates == expected_alternates, f'{filename}: hreflang links are not reciprocal'
+        assert 'application/ld+json' in source
+        print(f'PASS {filename}: article metadata, structure and hreflang')
 assert BASE + 'sitemap.xml' in (ROOT / 'robots.txt').read_text()
 assert '/index.html / 301' in (ROOT / '_redirects').read_text()
 not_found = Page((ROOT / '404.html').read_text(encoding='utf-8'))

@@ -30,7 +30,214 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/ru" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/" />
   </url>
-<url><loc>https://ninoabazadze.ge/certificate</loc><lastmod>2026-09-26</lastmod><xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/certificate" /><xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/certificate-en" /><xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/certificate-ru" /><xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/certificate" /></url>
-<url><loc>https://ninoabazadze.ge/certificate-en</loc><lastmod>2026-09-26</lastmod><xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/certificate" /><xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/certificate-en" /><xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/certificate-ru" /><xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/certificate" /></url>
-<url><loc>https://ninoabazadze.ge/certificate-ru</loc><lastmod>2026-09-26</lastmod><xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/certificate" /><xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/certificate-en" /><xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/certificate-ru" /><xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/certificate" /></url>
-<url><loc>https://ninoabazadze.ge/articles</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://ninoabazadze.ge/child-massage-kutaisi</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://ninoabazadze.ge/rehabilitation-kutaisi</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://ninoabazadze.ge/therapeutic-massage-kutaisi</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://ninoabazadze.ge/adult-massage-kutaisi</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://ninoabazadze.ge/first-visit-massage-kutaisi</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://ninoabazadze.ge/articles-en</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://ninoabazadze.ge/articles-ru</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://ninoabazadze.ge/child-massage-kutaisi-en</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://ninoabazadze.ge/child-massage-kutaisi-ru</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://ninoabazadze.ge/adult-massage-kutaisi-en</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://ninoabazadze.ge/adult-massage-kutaisi-ru</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://ninoabazadze.ge/rehabilitation-kutaisi-en</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://ninoabazadze.ge/rehabilitation-kutaisi-ru</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://ninoabazadze.ge/therapeutic-massage-kutaisi-en</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://ninoabazadze.ge/therapeutic-massage-kutaisi-ru</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://ninoabazadze.ge/first-visit-massage-kutaisi-en</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://ninoabazadze.ge/first-visit-massage-kutaisi-ru</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url></urlset>
+  <url>
+    <loc>https://ninoabazadze.ge/certificate</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/certificate" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/certificate-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/certificate-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/certificate" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/certificate-en</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/certificate" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/certificate-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/certificate-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/certificate" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/certificate-ru</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/certificate" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/certificate-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/certificate-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/certificate" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/articles</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/articles" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/articles-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/articles-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/articles" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/articles-en</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/articles" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/articles-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/articles-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/articles" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/articles-ru</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/articles" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/articles-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/articles-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/articles" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/child-massage-kutaisi</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/child-massage-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/child-massage-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/child-massage-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/child-massage-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/child-massage-kutaisi-en</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/child-massage-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/child-massage-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/child-massage-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/child-massage-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/child-massage-kutaisi-ru</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/child-massage-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/child-massage-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/child-massage-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/child-massage-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/adult-massage-kutaisi</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/adult-massage-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/adult-massage-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/adult-massage-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/adult-massage-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/adult-massage-kutaisi-en</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/adult-massage-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/adult-massage-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/adult-massage-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/adult-massage-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/adult-massage-kutaisi-ru</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/adult-massage-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/adult-massage-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/adult-massage-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/adult-massage-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/rehabilitation-kutaisi</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/rehabilitation-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/rehabilitation-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/rehabilitation-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/rehabilitation-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/rehabilitation-kutaisi-en</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/rehabilitation-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/rehabilitation-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/rehabilitation-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/rehabilitation-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/rehabilitation-kutaisi-ru</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/rehabilitation-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/rehabilitation-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/rehabilitation-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/rehabilitation-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/therapeutic-massage-kutaisi</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/therapeutic-massage-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/therapeutic-massage-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/therapeutic-massage-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/therapeutic-massage-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/therapeutic-massage-kutaisi-en</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/therapeutic-massage-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/therapeutic-massage-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/therapeutic-massage-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/therapeutic-massage-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/therapeutic-massage-kutaisi-ru</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/therapeutic-massage-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/therapeutic-massage-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/therapeutic-massage-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/therapeutic-massage-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/first-visit-massage-kutaisi</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/first-visit-massage-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/first-visit-massage-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/first-visit-massage-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/first-visit-massage-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/first-visit-massage-kutaisi-en</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/first-visit-massage-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/first-visit-massage-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/first-visit-massage-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/first-visit-massage-kutaisi" />
+  </url>
+  <url>
+    <loc>https://ninoabazadze.ge/first-visit-massage-kutaisi-ru</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ninoabazadze.ge/first-visit-massage-kutaisi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ninoabazadze.ge/first-visit-massage-kutaisi-en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ninoabazadze.ge/first-visit-massage-kutaisi-ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ninoabazadze.ge/first-visit-massage-kutaisi" />
+  </url>
+</urlset>

@@ -129,8 +129,25 @@ for filename, language, home in [('certificate.html', 'ka', '/'), ('certificate-
     print(f'PASS {filename}: certificate, language and navigation')
 
 tree = ET.parse(ROOT / 'sitemap.xml')
-urls = [n.text for n in tree.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+SITEMAP_NS = 'http://www.sitemaps.org/schemas/sitemap/0.9'
+XHTML_NS = 'http://www.w3.org/1999/xhtml'
+url_entries = tree.findall(f'.//{{{SITEMAP_NS}}}url')
+urls = [n.find(f'{{{SITEMAP_NS}}}loc').text for n in url_entries]
 assert set(urls) == {BASE + route for route in PUBLIC_ROUTES}
+for routes in ARTICLE_ROUTE_GROUPS:
+    expected_alternates = {
+        'ka': BASE + routes[0],
+        'en': BASE + routes[1],
+        'ru': BASE + routes[2],
+        'x-default': BASE + routes[0],
+    }
+    for route in routes:
+        entry = next(item for item in url_entries if item.find(f'{{{SITEMAP_NS}}}loc').text == BASE + route)
+        sitemap_alternates = {
+            item.attrib.get('hreflang'): item.attrib.get('href')
+            for item in entry.findall(f'{{{XHTML_NS}}}link')
+        }
+        assert sitemap_alternates == expected_alternates, f'sitemap: {route} has incomplete hreflang links'
 for routes in ARTICLE_ROUTE_GROUPS:
     expected_alternates = {
         'ka': BASE + routes[0],
